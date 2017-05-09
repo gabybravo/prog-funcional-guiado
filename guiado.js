@@ -21,3 +21,45 @@ function intersection2(l1,l2) {
 	});
 };
 
+//Ejercicio 2:
+
+var productos = [
+{
+	nombre: "pijama",
+	tipo: "ropa"
+},
+{
+	nombre: "nevera",
+	tipo: "electrodoméstico"
+},
+{	nombre: "asus",
+	tipo: "computador"
+},
+{
+	nombre: "macbook",
+	tipo: "computador"
+},
+{
+	nombre: "pijama",
+	tipo: "ropa"
+},
+{
+	nombre: "toshiba",
+	tipo: "computador"
+}
+];
+
+//Forma imperativa
+
+var computadores = [];
+for (var i = 0; i < productos.length; i++){
+	if(productos[i].tipo === "computador") {
+		computadores.push(productos[i]);
+	}
+}
+
+//Forma declarativa
+
+var computadores = productos.filter(function(productos){
+	return productos.tipo === "computador";
+});
